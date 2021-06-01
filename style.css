@@ -1,0 +1,50 @@
+
+body{
+    box-sizing: border-box;
+    background: #efefef;
+}
+ul{
+    list-style-type: none;
+    margin-bottom: 0;
+}
+.accordion-container{
+    margin: 0 auto;
+    background: white;
+    width: 85vw;
+    padding: 20px;
+    border-radius: 5px;
+}
+.question{
+    position: relative;
+    border-top: 1px solid #EEE;
+    padding: 20px;
+    color: #C00C00;
+    cursor: pointer;
+}
+.question span {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+
+}
+
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275 )all;
+}
+.answer p {
+    padding: 20px;
+}
+.accordion-container li.open .question span{
+    transform: rotate(180deg);
+    
+}
+.accordion-container li.open .answer {
+    max-height: 150px;
+}
